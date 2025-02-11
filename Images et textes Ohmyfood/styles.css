@@ -1,0 +1,295 @@
+/****** RESET DE BASE + FONTS ***********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/****** VARIABLES ***********/
+:root {
+  --primary-color: ##9356DC; /* Couleur principale */
+  --button-color: ##FF79DA;  /* Couleur des boutons */
+  --new: ##99E2D0;           /* Couleur du label 'Nouveau' */
+  --footer-color: #353535;  /* Couleur de fond du footer */
+  --text-color: #000000;    /* Couleur du texte */
+  --grey-color: #EAEAEA;    /* Pour la barre de localisation par ex. */
+  --section-color:#F6F6F6;  /* Couleur de fond des sections */
+}
+
+
+/****** CONTENEUR PRINCIPAL ***********/
+/* Largeur max 368px, centré au milieu. Un padding horizontal pour “aérer”. */
+.main-container {
+  width: 100%;
+  max-width: 368px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/****** LIENS ***********/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/****** TITRES DE SECTION ***********/
+.section-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/****** HEADER ***********/
+/* On le sépare légèrement du haut de la page */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 10px;
+  
+}
+
+/* Logo */
+header .logo {
+  width: 197px; /* Un peu plus grand pour ressembler à la maquette */
+  height: 36px;
+}
+
+/****** BARRE DE LOCALISATION ***********/
+/* Barrette grise avec l’icône du pin + le texte centré. */
+.localisation-bar {
+  width: 100%;
+  background-color: var(--grey-color);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border: solid 1px #EAEAEA;
+  padding: 10px;
+}
+
+/* L’intérieur, si tu veux centrer le contenu texte/image */
+.localisation {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: center;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.localisation img {
+  width: 12px;
+  height: 16px;
+}
+
+/****** BLOC PRÉSENTATION + BOUTON ***********/
+.presentation {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--section-color);
+}
+
+.presentation h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.presentation p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--footer-color);
+  margin-bottom: 40px;
+}
+
+/* Bouton principal */
+.presentation .cta-button {
+  display: inline-block;
+  background-color: var(--button-color);
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(151, 71, 255, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #FF79DA;
+  box-shadow: 0px 5px 15px rgba(151, 71, 255, 0.5);
+}
+
+/****** FONCTIONNEMENT ***********/
+.fonctionnement {
+  margin-bottom: 80px;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.fonctionnement .section-title {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Chaque étape */
+.fonctionnement-step {
+  background-color: var(--section-color);
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fonctionnement-step img {
+  width: 18px;
+  height: 18px;
+}
+
+.fonctionnement-step p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/****** SECTION RESTAURANTS ***********/
+.restaurants {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 60px;
+  background-color: var(--section-color);
+}
+
+/* Titre “Restaurants” */
+.restaurants-title {
+  margin-bottom: 15px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurants-title h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Liste de cartes */
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espace vertical entre chaque carte */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Chaque carte */
+.restaurants-cards .card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden; /* pour arrondir les coins de l’image */
+  position: relative; 
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* L’image en haut de la carte */
+.restaurants-cards img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Label “Nouveau”, positionné en haut à droite sur l’image */
+.new-label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Contenu texte de la carte */
+.card-content {
+  padding: 15px;
+}
+
+/* Titre du restaurant */
+.restaurants-cards .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+/* Sous‐titre */
+.restaurants-cards .card-subtitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/* Icône favori (cœur) */
+.restaurants-cards .favorite-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+
+    }
+    .favorite-icon:hover{
+    opacity: 1;
+    color: #9747ff;
+    }
+
+/****** FOOTER ***********/
+.footer {
+  background-color: var(--footer-color);
+  padding: 20px 0;
+}
+
+.footer-logo {
+  width: 139px;
+  height: 27px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.footer-nav {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.footer-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer-nav img {
+  width: 11px;
+  height: 13px;
+  margin-right: 10px;
+}
